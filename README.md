@@ -1,4 +1,4 @@
-# Intent Classifier 
+# IntentClassifier 
 
 Все будет, но не сразу
 
