@@ -10,7 +10,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import SelectFromModel
 
-# TODO:
+# TODO: добавить возможность указывать путь до этого файла или подгрузить его из интернета
 nlp = spacy.load('xx_ent_wiki_sm')
 
 
@@ -54,7 +54,7 @@ def semhash_corpus(corpus):
     return new_corpus
 
 
-class NaiveBayesIntentClassifier(BaseEstimator, ClassifierMixin):
+class LogisticRegressionIntentClassifier(BaseEstimator, ClassifierMixin):
     """
     """
 
@@ -70,13 +70,16 @@ class NaiveBayesIntentClassifier(BaseEstimator, ClassifierMixin):
     def fit(self, X, y, **kwargs):
         """
         """
+        X = semhash_corpus(X)
         self.text_clf.fit(X, y)
         return self
 
     def predict(self, X):
         """
         """
+        X = semhash_corpus(X)
         return self.text_clf.predict(X)
 
     def fit_predict(self, X, y, **kwargs):
+        X = semhash_corpus(X)
         return self.fit(X, y).predict(X)

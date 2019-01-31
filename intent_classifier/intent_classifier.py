@@ -8,15 +8,15 @@ License: Apache License 2.0.
 
 from sklearn.base import BaseEstimator, ClassifierMixin
 
-from .NaiveBayesIntentClassifier import NaiveBayesIntentClassifier
+from .LogisticRegressionIntentClassifier import LogisticRegressionIntentClassifier
 
 
 class IntentClassifier(BaseEstimator, ClassifierMixin):
     """ IntentClassifier base class. """
 
     def __init__(self, method_name):
-        if method_name == 'naive bayes':
-            return NaiveBayesIntentClassifier()
+        if method_name == 'log_reg':
+            return LogisticRegressionIntentClassifier()
 
         raise NotImplementedError(method_name)
 
