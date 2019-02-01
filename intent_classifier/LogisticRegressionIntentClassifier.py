@@ -7,6 +7,7 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.linear_model import LogisticRegression
 
 # TODO: добавить возможность указывать путь до этого файла или подгрузить его из интернета
+# what is this?
 nlp = spacy.load('xx_ent_wiki_sm')
 
 
@@ -14,9 +15,9 @@ def preprocess(sentence):
     """ Preprocess sentence by changing all letters to lower case, replacing pronouns
     by ’-PRON-’, and removing all special characters except stop characters.
 
-    :param sentence: source sentence
+    :param sentence: origin sentence as list of sentense of String type
 
-    :return clear sentence
+    :return clear sentence as list  of sentense of String type
 
     """
     clean_tokens = []
@@ -30,9 +31,9 @@ def preprocess(sentence):
 def semhash_tokenizer(sentence, n=3):
     """ Convert sentence into semantic hash tokens.
 
-    :param sentence: source sentence after preprocessing
+    :param sentence: origin sentence after preprocessing  as 1D list of sentense of string type
 
-    :return list of semantic hash tokens.
+    :return list of semantic hash tokens as np.array, ndim = 2
 
     """
     tokens = sentence.split(" ")
