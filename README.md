@@ -6,7 +6,7 @@ The library conrains the next clssification algorithms' implementations:
 * Logistic Regression + Subword Semantic Hashing
 * Bert + LogReg
 * USE
-* LSTM + Attention (Сергей Березин)
+* LSTM + Attention
 * CNN
 * Mpclassifier+Tf-IDF
 
