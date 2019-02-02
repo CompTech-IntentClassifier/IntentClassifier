@@ -14,13 +14,15 @@ from .LogisticRegressionIntentClassifier import LogisticRegressionIntentClassifi
 class IntentClassifier(BaseEstimator, ClassifierMixin):
     """ IntentClassifier base class. """
     def __init__(self, method_name):
-	""" Create a new object with specified parameters.
-		
-	:param method_name: selected model
+        """ Create a new object with specified parameters.
 
-	"""
+        :param method_name: selected model
+
+        """
         if method_name == 'log_reg':
             self.model = LogisticRegressionIntentClassifier()
+        elif method_name == 'perceptron':
+            self.model = MultiLayerPerceptronClassifier()
         else:
             raise NotImplementedError(method_name)
 
