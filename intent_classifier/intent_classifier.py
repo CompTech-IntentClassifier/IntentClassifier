@@ -21,7 +21,7 @@ class IntentClassifier(BaseEstimator, ClassifierMixin):
 	"""
         if method_name == 'log_reg':
             self.model = LogisticRegressionIntentClassifier()
-	else:
+        else:
             raise NotImplementedError(method_name)
 
     def fit(self, X, y, **kwargs):
