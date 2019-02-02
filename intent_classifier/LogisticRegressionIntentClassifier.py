@@ -72,7 +72,7 @@ class LogisticRegressionIntentClassifier(BaseEstimator, ClassifierMixin):
         ])
 
     def fit(self, X, y, **kwargs):
-        """ Fit the seq2seq model to convert sequences one to another.
+        """ Fit the logistic regression model to convert sequence to intent.
 
         :param X: input texts for training.
         :param y: target intents for training.
@@ -86,7 +86,6 @@ class LogisticRegressionIntentClassifier(BaseEstimator, ClassifierMixin):
 
     def predict(self, X):
         """ Predict resulting intents by source sequences with a trained logistic regression model.
-        Each sequence is unicode text composed from the tokens. Tokens are separated by spaces.
 
         :param X: source sequences.
 

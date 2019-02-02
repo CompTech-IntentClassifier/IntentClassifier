@@ -13,22 +13,37 @@ from .LogisticRegressionIntentClassifier import LogisticRegressionIntentClassifi
 
 class IntentClassifier(BaseEstimator, ClassifierMixin):
     """ IntentClassifier base class. """
-
     def __init__(self, method_name):
-        if method_name == 'log_reg':
-            return LogisticRegressionIntentClassifier()
+	""" Create a new object with specified parameters.
+		
+	:param method_name: selected model
 
-        raise NotImplementedError(method_name)
+	"""
+        if method_name == 'log_reg':
+            self.model = LogisticRegressionIntentClassifier()
+	else:
+            raise NotImplementedError(method_name)
 
     def fit(self, X, y, **kwargs):
+        """ Fit the selected model to convert sequence to intent.
+
+        :param X: input texts for training.
+        :param y: target intents for training.
+
+        :return self
+
         """
-        """
-        return self
+        return self.model.fit(X, y)
 
     def predict(self, X):
+        """ Predict resulting intents by source sequences with a trained selected model.
+        
+	:param X: source sequences.
+
+        :return: resulting intents, predicted for source sequences.
+
         """
-        """
-        return None
+        return self.model.predict(X)
 
     def fit_predict(self, X, y, **kwargs):
-        return None
+        return self.model.fit_predict(X,y)
