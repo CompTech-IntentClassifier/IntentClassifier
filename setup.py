@@ -99,8 +99,8 @@ setup(
     description='Intent Classifier',
     long_description=long_description,
     url='https://github.com/CompTech-IntentClassifier/IntentClassifier',
-    author='Pavel Lisenkov', 'Danil Yakovlev', 'Nikolay Ovchinikov', 'Anastasiya Malysheva'
-    author_email='pavilbezpravil@gmail.com', 'ddyakovlev@yandex.ru', 'nastymana@yandex.ru', 'sergeyberezin123@gmail.com',  
+    author='Pavel Lisenkov, Daniil Yakovlev, Nikolay Ovchinikov, Anastasiya Malysheva, Sergey Berezin',
+    author_email='pavilbezpravil@gmail.com, ddyakovlev@yandex.ru, iam@kolsha.ru, nastymana@yandex.ru, sergeyberezin123@gmail.com',  
     license='Apache License Version 2.0',
     classifiers=[
         'Development Status :: 3 - Alpha',
