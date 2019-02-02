@@ -45,5 +45,3 @@ class IntentClassifier(BaseEstimator, ClassifierMixin):
         """
         return self.model.predict(X)
 
-    def fit_predict(self, X, y, **kwargs):
-        return self.model.fit_predict(X,y)

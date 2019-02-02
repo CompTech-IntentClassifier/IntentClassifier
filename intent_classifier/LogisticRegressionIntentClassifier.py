@@ -95,6 +95,3 @@ class LogisticRegressionIntentClassifier(BaseEstimator, ClassifierMixin):
         X = semhash_corpus(X)
         return self.text_clf.predict(X)
 
-    def fit_predict(self, X, y, **kwargs):
-        return self.fit(X, y).predict(X)
-
