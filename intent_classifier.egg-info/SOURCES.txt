@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+intent_classifier/LogisticRegressionIntentClassifier.py
+intent_classifier/__init__.py
+intent_classifier/intent_classifier.py
+intent_classifier.egg-info/PKG-INFO
+intent_classifier.egg-info/SOURCES.txt
+intent_classifier.egg-info/dependency_links.txt
+intent_classifier.egg-info/requires.txt
+intent_classifier.egg-info/top_level.txt
