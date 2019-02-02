@@ -1,6 +1,6 @@
-# IntentClassifier_RUS 
+# IntentClassifier
 
-This is IntentClassifier_RUS, a library on Python implemented classification of intents in short sentenses. The aim of library is to realize the effective intent detection specified for the Russian language.
+This is IntentClassifier, a library on Python implemented classification of intents in short sentenses. The aim of library is to realize the effective intent detection specified for the Russian language.
 
 The library conrains the next clssification algorithms' implementations:
 * Logistic Regression + Subword Semantic Hashing
