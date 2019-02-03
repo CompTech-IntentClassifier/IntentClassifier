@@ -9,6 +9,7 @@ class Tests(unittest.TestCase):
     def test_creation(self):
         IntentClassifier('log_reg')
         IntentClassifier('perceptron')
+        IntentClassifier('use')
 
     def test_fit(self):
         logreg_clf = IntentClassifier('log_reg')
@@ -28,6 +29,9 @@ class Tests(unittest.TestCase):
             clf.fit(['aaa', 'sdfsd', 'sdfsdf'], [1, 2, 3])
             clf.fit(np.array(['aaa', 'sdfsd', 'sdfsdf']), np.array([1, 2, 3]))
 
+    def test_predict(self):
+        #TO DO @pavilbezpravil do it pes
+        
 
 if __name__ == '__main__':
     unittest.main()
