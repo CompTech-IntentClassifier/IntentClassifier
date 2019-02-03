@@ -74,7 +74,7 @@ python setup.py test
 import IntentClassifier
 model = IntentClassifier()
 sentence = "Жду ответа оператора"
-class = model.predict(sentence)
+cls = model.predict(sentence)
 ```
 2. Чтобы дообучить классификатор на своих данных и использовать новую модель используйте метод fit() куда подается размеченный датасет в виде словаря состоящего из пар <класс | выражение>
 ```
@@ -88,5 +88,5 @@ classes = dataset['classes']
 model = IntentClassifier('log_reg')
 model = model.fit(sentences, classes)
 sentence = "Жду ответа оператора"
-class = model.predict(sentence)
+cls = model.predict(sentence)
 ```
