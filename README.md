@@ -53,7 +53,10 @@ fit(X, Y, **kwargs)
 ```
 pip install -r requirements.txt
 ```
-Кроме того, требуется скачать предобученную модель spacy xx_ent_wiki_sm с сайта <https://spacy.io/models/xx>
+Кроме того, требуется скачать предобученную модель spacy xx_ent_wiki_sm с сайта <https://spacy.io/models/xx>, выполнив команду:
+```
+python -m spacy download xx_ent_wiki_sm
+```
 
 Для установки пакета IntentClassifier выполните команду
 ```
