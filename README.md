@@ -71,14 +71,14 @@ python setup.py test
 
 1. Использование классификатора на основе многоязычного Bert.
 ```
-import IntentClassifier
+from intent_classifier import IntentClassifier
 model = IntentClassifier()
 sentence = "Жду ответа оператора"
 cls = model.predict(sentence)
 ```
 2. Чтобы дообучить классификатор на своих данных и использовать новую модель используйте метод fit() куда подается размеченный датасет в виде словаря состоящего из пар <класс | выражение>
 ```
-import IntentClassifier 
+from intent_classifier import IntentClassifier 
 
 dataset = read_csv("newdataset.csv")
 sentences = dataset['texts']
