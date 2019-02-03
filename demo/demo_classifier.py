@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import IntentClassifier
+from intent_classifier import IntentClassifier
 
 model = IntentClassifier()
 sentence = "Жду ответа оператора"
