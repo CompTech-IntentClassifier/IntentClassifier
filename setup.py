@@ -114,7 +114,7 @@ setup(
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords=['scikit-learn'],
+    keywords=['scikit-learn', 'chat bots', 'nlp', 'nlu', 'intent classification'],
     install_requires=['numpy', 'scikit-learn'],
     test_suite='tests'
 )
