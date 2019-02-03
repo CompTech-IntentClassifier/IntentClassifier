@@ -8,7 +8,7 @@ from .USEIntentClassifier import USEIntentClassifier
 class IntentClassifier(BaseEstimator, ClassifierMixin):
     """ IntentClassifier base class. """
 
-    def __init__(self, method_name, *args, **kwargs):
+    def __init__(self, method_name='log_reg', *args, **kwargs):
         """ Create a new object with specified parameters.
 
         :param method_name: selected model
