@@ -3,6 +3,7 @@ from sklearn.base import BaseEstimator, ClassifierMixin
 from .LogisticRegressionIntentClassifier import LogisticRegressionIntentClassifier
 from .MultiLayerPerceptronClassifier import MultiLayerPerceptronClassifier
 from .USEIntentClassifier import USEIntentClassifier
+from .BertIntentClassifier import BertIntentClassifier
 
 
 class IntentClassifier(BaseEstimator, ClassifierMixin):
@@ -14,12 +15,15 @@ class IntentClassifier(BaseEstimator, ClassifierMixin):
         :param method_name: selected model
 
         """
+        method_name = method_name.tolower()
         if method_name == 'log_reg':
             self.model = LogisticRegressionIntentClassifier(*args, **kwargs)
         elif method_name == 'perceptron':
             self.model = MultiLayerPerceptronClassifier(*args, **kwargs)
         elif method_name == 'use':
             self.model = USEIntentClassifier(*args, **kwargs)
+        elif method_name == 'bert':
+            self.model = BertIntentClassifier(*args, **kwargs)
         else:
             raise NotImplementedError(method_name)
 
