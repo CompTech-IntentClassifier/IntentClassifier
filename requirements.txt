@@ -18,7 +18,7 @@ Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.8
 Markdown==3.0.1
 nltk==3.4
-numpy==1.16.0
+numpy==1.22.0
 pandas==0.24.0
 protobuf==3.6.1
 python-dateutil==2.7.5
